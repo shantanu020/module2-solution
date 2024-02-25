@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+}
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    overflow-x: hidden;
+    
+}
+.container{
+    display: flex;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content:space-around;
+    align-items: center;
+    gap:20px;
+}
+.container-heading{
+    padding-top:40px;
+    padding-bottom: 30px;
+    font-size: 175%;
+    text-align: center;
+    font-weight: 900;
+}
+.absolute{
+    position:absolute;
+}
+.relative{
+    position: relative;
+}
+section{
+    font-weight:500;
+    padding-top: 40px ;
+    border:1px solid black;
+    padding: 40px 0px 10px 10px;
+    background-color: darkgray;
+}
+.section-title{
+    font-weight: bolder;
+    font-size: 125%;
+    top:0px;
+    right:0px;
+    border:1px solid black;
+    padding: 5px 40px;
+}
+.relative{
+    position: relative;
+}
+#chicken .section-title{
+    background-color: rgb(213,152,152);
+}
+#beef .section-title{
+    background-color: rgb(193,69,67);
+}
+#shushi .section-title{
+    background-color: rgb(229,209,152);
+}
+@media (min-width: 768px) and (max-width:991px) {
+    .container {
+        display: grid;
+        grid-template-rows: repeat(2,1fr);
+        grid-template-columns: repeat(2,1fr);
+      }
+    #chicken{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 1;
+        grid-column-end: 2;
+    }
+    #beef{
+        grid-row-start: 1;
+        grid-row-end: 2;
+        grid-column-start: 2;
+        grid-column-end: 3;
+    }
+    #shushi{
+        grid-row-start: 2;
+        grid-column-end: 3;
+        grid-column-start:1;
+        grid-column-end: 3;
+    }  
+
+}
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+    }
+ }
